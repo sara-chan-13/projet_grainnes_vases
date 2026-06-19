@@ -1,0 +1,327 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    background-color: #ffffff; /* Hada howa l-byed nqi (Pure White) */
+    color: #333;
+
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    margin: 0;
+    background-color: rgba(225, 202, 205, 0.938);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+header h2 {
+    margin: 0;
+    color: #333;
+}
+
+ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin-left: auto;
+    padding: 0;
+}
+
+header img {
+    width: 50px;
+    height: 50px; 
+    margin-right: 15px;
+    border-radius: 50%; 
+}
+
+.hero {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    height: 80vh; 
+    padding: 0 50px;
+    
+    /* 1. L-Overlay: Zidna linear-gradient qbel mn l-url dyal t-tswira */
+    /* Had l-gradient kay-bda b k7el chffaf (0.4) l-fouq, w kay-wlli k7el m-ghlouq (0.8) l-te7t */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('s2.jpeg');
+    
+    background-size: cover; /* Kat-khlli t-tswira t-3emmer l-blassa kamla */
+    
+    /* 2. Position: Kat-goul l-CSS rkkez 3la l-weste dyal t-tswira */
+    background-position: center center; 
+    
+    /* 3. Parallax (Optionnel walakin wa3r): Kat-khlli t-tswira tabta mlli kat-scrolli */
+    background-attachment: fixed; 
+}
+/* L-Boîte dyal l-kettba */
+.intro {
+    max-width: 500px;
+    /* Had l-khalfia chffafa (k7el b 60%) kat-khlli l-kettba t-ban mzyan foq ay tswira */
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 40px; /* Espace weste l-boîte */
+    border-radius: 15px; /* Rkane m-dowrin */
+    color: #ffffff; /* L-Kettba b l-byed */
+    backdrop-filter: blur(5px); /* Optionnel: Kay-dir effet flou l-tswira li mora l-boîte (Glassmorphism) */
+}
+
+/* Z-zwaq dyal l-3anawin w n-nas */
+.intro h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Khiyal l-kettba bach t-zid t-ban */
+}
+
+.intro h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: rgb(228, 197, 202); /* Loun m-waty m3a l-bouton */
+}
+
+.intro p {
+    font-size: 1.1em;
+    line-height: 1.6; /* Espace bin s-stoura bach t-qra mzyan */
+    margin-bottom: 30px;
+}
+
+/* L-Bouton dyalek (b3d t-tss7i7) */
+.intro button {
+    padding: 12px 30px;
+    background-color: rgb(228, 197, 202);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 0 20px rgba(219, 165, 195, 0.6);
+    cursor: pointer;
+    /* Tss7i7 dyal 'ti' l 'all' */
+    transition: all 0.4s ease; 
+}
+
+.intro button:hover {
+    background-color: rgb(240, 210, 215); /* Loun kay-fta7 chwiya f l-hover */
+    transform: translateY(-6px) scale(1.02); 
+    box-shadow: 0 10px 30px rgba(245, 183, 203, 0.9); 
+}
+
+
+
+
+
+
+
+
+
+/* --- SECTION 2 : Concept --- */
+.concept {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Bdlnaha mn stretch l center bach ma t-t-jbedch tswira */
+    padding: 80px 50px;
+    background-color: #ffffff;
+    gap: 50px; 
+}
+
+/* L-ktaba (Bqat kima hiya) */
+.concept-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.concept-text h2 {
+    font-size: 45px; 
+    color: #8fa886;
+    margin-bottom: 40px; 
+}
+
+.concept-text p {
+    font-size: 20px; 
+    line-height: 1.8; 
+    color: #666;
+    margin-bottom: 50px; 
+}
+
+.btn-outline {
+    align-self: flex-start; 
+    padding: 12px 35px;
+    background-color: transparent;
+    border: 2px solid #8fa886; 
+    color: #8fa886;
+    border-radius: 5px;
+    font-size: 18px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: #8fa886;
+    color: white;
+}
+
+/* L-Blassa d-tswira (Hna fin derna t-t3dil) */
+.concept-image {
+    width: 35%; /* Nqesna l-3erd dyalha mn 45% l 35% bach t-sghar */
+    display: flex;
+    justify-content: center; /* Kan-centriywha f blast-ha */
+}
+
+.concept-image img {
+    width: 100%;
+    height: auto; /* Had auto hiya s-ser! Kat-khelli tswira t-ban kamla w t-7afed 3la l-3bar d-l-asl dyalha */
+    max-height: 450px; /* 3tinaha 7ed a9sa bach ga3ma t-foutu f t-toul */
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.621);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+/* L-7araka mlli t-duz la souris */
+.concept-image img:hover {
+    transform: translateY(-8px) scale(1.02); /* Kat-tle3 l-fouq b 8px w kat-kber ghir chwiiiya */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* L-khyal kay-kber bach t-ban t-hezzat */
+    cursor: pointer; /* Zdnaha bach y-ban l-yed mlli t-qissiha */
+    box-shadow: 0 18px 28px #8fa886f2;
+}
+
+
+
+
+
+/* --- SECTION 4 : Banner dyal les Packs --- */
+.pack-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #ffffff; /* Khalfiyya d-la section bayda n9iya */
+}
+
+/* L-mrebe3 li l-dakhel (li kan z-zaj w wlla tswira) */
+.glass-box {
+    /* Hna fin ghat-diri s-smiya d-tswira dyalek. 
+       Zdt lik wa7ed d-del k7el khfif (0.5) fo9 tswira bach l-ktaba l-byda t-9ra mzyan */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('flower\ seeds.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    
+    padding: 70px 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    color: white; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.347); /* Khyal zwin 3la bera */
+}
+
+/* L-ktaba w l-bouton kay-bqaw huma huma */
+.glass-box h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.glass-box p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #f1f1f1;
+}
+
+.btn-glass {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #8fa886;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    border: 2px solid #8fa886;
+}
+
+.btn-glass:hover {
+    background-color: white; 
+    color: #8fa886; 
+    transform: translateY(-5px);
+}
+
+
+
+/* --- FOOTER --- */
+footer {
+    background-color: rgb(255, 234, 245); /* Nfs l-loun d-l-header li khtarity f l-bdaya */
+    color: #333;
+    padding-top: 60px;
+    margin-top: 80px; /* Bach y-b33ed mn l-section li qbl mnnou */
+    border-top: 1px solid rgba(248, 222, 235, 0.8);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Bach ila sghar l-ecran, y-hbtou l-te7t w ma y-t-khsserch d-décor */
+    padding: 0 50px 50px 50px;
+    gap: 40px;
+}
+
+.footer-about, .footer-links, .footer-contact {
+    max-width: 320px;
+}
+
+footer h3 {
+    color: #8fa886; /* L-khder dyalna */
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.footer-about p, .footer-contact p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* Zwaq d-les liens li f l-footer */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* L-7araka mlli t-qissi l-liens b la souris */
+.footer-links a:hover {
+    color: #8fa886;
+    padding-left: 8px; /* Kay-k7ez l-lien chwiiiiya l-limen, kay-3ti mndar m-jehd! */
+}
+
+/* L-banda d-l-te7t ga3 (Copyright) */
+.footer-bottom {
+    background-color: #f8deeb; /* Rose mghlou9 chwiya 3la l-khalfiyya */
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+

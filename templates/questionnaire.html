@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questionnaire - Eco-Werda</title>
+    <style>
+        body { font-family: Arial; background-color: #f4f7f6; padding: 20px; }
+        .form-container { background: white; padding: 30px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { color: #2ecc71; text-align: center; }
+        .question { margin-bottom: 20px; }
+        .question p { font-weight: bold; margin-bottom: 10px; }
+        button { background-color: #2ecc71; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Aidez-nous à créer le kit parfait ! 🌸</h2>
+    
+    <!-- L-Formulaire li ghay-sifet l-m3loumat l-Python -->
+    <form action="/submit" method="POST">
+        
+        <div class="question">
+            <p>1. Connaissez-vous les kits de plantation décoratifs ?</p>
+            <input type="radio" name="q1" value="Oui"> Oui <br>
+            <input type="radio" name="q1" value="Non"> Non
+        </div>
+
+        <div class="question">
+            <p>2. Aimez-vous décorer votre maison, balcon ou jardin avec des fleurs ?</p>
+            <input type="radio" name="q2" value="Oui"> Oui <br>
+            <input type="radio" name="q2" value="Non"> Non
+        </div>
+
+        <div class="question">
+            <p>3. Préférez-vous un pack simple ou un kit avec vase/pot recyclé ?</p>
+            <input type="radio" name="q3" value="Pack simple"> Pack simple (graines seules) <br>
+            <input type="radio" name="q3" value="Kit avec vase recyclé"> Kit complet avec vase recyclé
+        </div>
+
+        <div class="question">
+            <p>4. Quel budget accepteriez-vous pour ce produit ?</p>
+            <select name="q4">
+                <option value="Moins de 30 DH">Moins de 30 DH</option>
+                <option value="30 à 50 DH">30 à 50 DH</option>
+                <option value="50 à 80 DH">50 à 80 DH</option>
+                <option value="Plus de 80 DH">Plus de 80 DH</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <p>5. Quel style de décoration préférez-vous ?</p>
+            <input type="checkbox" name="q5" value="Simple"> Simple
+            <input type="checkbox" name="q5" value="Coloré"> Coloré
+            <input type="checkbox" name="q5" value="Naturel"> Naturel
+            <input type="checkbox" name="q5" value="Élégant"> Élégant
+        </div>
+
+        <button type="submit">Envoyer mes réponses</button>
+    </form>
+</div>
+
+</body>
+</html>
